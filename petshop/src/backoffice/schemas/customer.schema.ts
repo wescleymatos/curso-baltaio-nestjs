@@ -3,89 +3,89 @@ import * as mongoose from 'mongoose';
 export const CustomerSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     document: {
         type: String,
         required: true,
         trim: true,
         index: {
-            unique: true
-        }
+            unique: true,
+        },
     },
     email: {
         type: String,
         required: true,
         trim: true,
         index: {
-            unique: true
-        }
+            unique: true,
+        },
     },
     pets: [
         {
             name: {
-                type: String
+                type: String,
             },
             gender: {
                 type: String,
-                enum: ['male', 'female', 'none']
+                enum: ['male', 'female', 'none'],
             },
             kind: {
-                type: String
+                type: String,
             },
             brand: {
-                type: String
-            }
-        }
+                type: String,
+            },
+        },
     ],
     billingAddress: {
         zipCode: {
-            type: String
+            type: String,
         },
         street: {
-            type: String
+            type: String,
         },
         propertyNumber: {
-            type: String
+            type: String,
         },
         city: {
-            type: String
+            type: String,
         },
         state: {
-            type: String
-        }
+            type: String,
+        },
     },
     shippingAddress: {
         zipCode: {
-            type: String
+            type: String,
         },
         street: {
-            type: String
+            type: String,
         },
         propertyNumber: {
-            type: String
+            type: String,
         },
         city: {
-            type: String
+            type: String,
         },
         state: {
-            type: String
-        }
+            type: String,
+        },
     },
     creditCard: {
         holder: {
-            type: String
+            type: String,
         },
         numericSequence: {
-            type: String
+            type: String,
         },
         expiration: {
-            type: String
-        }
+            type: String,
+        },
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true
-    }
+        required: true,
+    },
 });
