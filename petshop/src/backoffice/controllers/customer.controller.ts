@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Put, Delete, Param, Body, UseInterceptors } from '@nestjs/common';
 import { Result } from '../models/result.model';
-import { ValidatorInterceptor } from 'src/interceptors/validator.interceptor';
+import { ValidatorInterceptor } from '../../interceptors/validator.interceptor';
 import { CreateCustomerContract } from '../contracts/customer.contract';
 import { CreateCustomerDto } from '../dtos/create-customer.dto';
 import { AccountService } from '../services/account.service';
@@ -8,10 +8,7 @@ import { User } from '../models/user.model';
 
 @Controller('v1/customers')
 export class CustomerController {
-    constructor(
-        private readonly accountServive: AccountService
-    ) {    
-    }
+    constructor(private readonly accountServive: AccountService) {}
 
     @Get()
     get() {

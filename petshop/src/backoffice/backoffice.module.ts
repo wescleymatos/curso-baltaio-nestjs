@@ -19,7 +19,7 @@ import { AccountService } from './services/account.service';
         ]),
     ],
     controllers: [CustomerController],
-    providers: [AccountService]
+    providers: [AccountService],
 })
 
 export class BackofficeModule {}

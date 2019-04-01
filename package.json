@@ -12,7 +12,12 @@
     "@nestjs/cli": "^5.7.1"
   },
   "dependencies": {
+    "@nestjs/common": "^6.0.5",
+    "@nestjs/core": "^6.0.5",
     "@nestjs/mongoose": "^5.2.2",
-    "mongoose": "^5.4.9"
+    "@types/mongoose": "^5.3.24",
+    "mongoose": "^5.4.9",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.4.0"
   }
 }
